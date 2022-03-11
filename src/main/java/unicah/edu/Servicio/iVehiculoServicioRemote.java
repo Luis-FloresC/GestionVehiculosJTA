@@ -1,0 +1,18 @@
+package unicah.edu.Servicio;
+
+import unicah.edu.Dominio.Vehiculo;
+
+import java.util.List;
+
+
+import javax.ejb.Remote;
+
+@Remote
+public interface iVehiculoServicioRemote {
+    public List<Vehiculo> listarVehiculos();
+    public Vehiculo encontrarVehiculoPorId(Vehiculo vehiculo);
+    public Vehiculo encontrarVehiculoPorPlaca(Vehiculo vehiculo);
+    public void registrarVehiculo(Vehiculo vehiculo);
+    public void modificarVehiculo(Vehiculo vehiculo);
+    public void eliminarVehiculo(Vehiculo vehiculo);
+}
